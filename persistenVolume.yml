@@ -12,7 +12,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
-  hostpath:
+  hostPath:
     path: /mnt/data
   # local:
   # mountOptions:
