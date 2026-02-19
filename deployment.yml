@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   namespace: nginx
-  # labels:
-  #   app: nginx
 spec:
   replicas: 3
   selector:
@@ -21,3 +19,10 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+      #   volumeMounts:
+      #     - mountPath: /var/www/html
+      #       name: local-pvc
+      # volumes:
+      # - name: local-pv
+      #   persistentVolumeClaim:
+      #     claimName: local-pvc
